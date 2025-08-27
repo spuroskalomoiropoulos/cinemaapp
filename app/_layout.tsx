@@ -26,7 +26,7 @@ export default function RootLayout() {
   return (
     <AuthProvider>
       <AuthGate>
-        {/* Δεν δηλώνουμε τα group names εδώ */}
+        {/* Δ */}
         <Stack screenOptions={{ headerShown: false }} />
       </AuthGate>
     </AuthProvider>

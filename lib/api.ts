@@ -2,7 +2,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 
-// θυμισου να ανοιγει ipconfig καθε restart sto pc 
+// θυμισου να ανοιγεις ipconfig καθε restart sto pc ή αν κανω το router restart 
 export const api = axios.create({
   baseURL: 'http://192.168.1.44:4000/api',
 });

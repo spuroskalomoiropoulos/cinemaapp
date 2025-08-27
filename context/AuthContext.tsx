@@ -16,7 +16,7 @@ export function AuthProvider({ children }: { children:React.ReactNode }) {
       const u = await AsyncStorage.getItem('user');
       if (u) setUser(JSON.parse(u));
     } finally {
-      setReady(true); // σημαντικό: δηλώνουμε ότι φορτώσαμε από το storage
+      setReady(true); // δηλωση πως φορτώσαμε από το storage κομπλε
     }
   })(); }, []);
 

@@ -9,7 +9,7 @@ const {
 
 const router = express.Router();
 
-// Προστατευμένα με JWT
+// τα εχω προστατεψει με JWT
 router.get('/user/reservations', auth, listUserReservations);
 router.post('/reservations', auth, createReservation);
 router.patch('/reservations/:reservation_id', auth, updateReservation);

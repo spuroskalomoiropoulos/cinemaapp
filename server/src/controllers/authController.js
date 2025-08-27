@@ -27,7 +27,7 @@ async function register(req, res) {
 
     res.status(201).json({ user_id: r.insertId, name, email });
   } catch (e) {
-    console.error('Register error:', e); // μόνο για log στο server
+    console.error('Register error:', e); // σερβερ log 
     res.status(500).json({ error: 'Server error' });
   }
 }
@@ -72,7 +72,7 @@ async function login(req, res) {
       }
     });
   } catch (e) {
-    console.error('Login error:', e); // log μόνο στον server
+    console.error('Login error:', e); // το ιδιο με το πανω 
   res.status(500).json({ error: 'Server error' });
   }
 }

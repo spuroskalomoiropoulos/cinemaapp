@@ -17,7 +17,7 @@ export default function MoviesByCinema() {
   const [movies,setMovies] = useState<Movie[]>([]);
   const [selectedMovie,setSelectedMovie] = useState<number | null>(null);
 
-  // επόμενες 7 ημέρες
+  //  7 ημέρες picker
   const dateOptions = useMemo(() => {
     const arr: {value:string; label:string}[] = [];
     const weekdays = ['Δευτέρα','Τρίτη','Τετάρτη','Πέμπτη','Παρασκευή','Σάββατο','Κυριακή'];
@@ -85,7 +85,7 @@ export default function MoviesByCinema() {
 
   return (
     <LinearGradient
-      colors={['#1a0033', '#4b0082', '#6a0dad']} // Dark cinema gradient
+      colors={['#1a0033', '#4b0082', '#6a0dad']} //  gradient
       style={{ flex:1, padding:16, gap:10 }}
     >
       <Text style={{ fontSize:22, fontWeight:'600', color:'#fff' }}>{name || 'Ταινίες'}</Text>

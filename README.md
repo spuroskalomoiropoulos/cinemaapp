@@ -19,7 +19,8 @@
 
 ## ⚙️ ΟδηγίΣες εγκατάστασης
 
-## 1️⃣ Backend
+1️⃣ # Backend
+
 ```bash
 cd server
 npm install
@@ -27,11 +28,66 @@ npm start
 
 **Σημείωση: Σιγουρέψου ότι η βάση MariaDB τρέχει και ότι το αρχείο .env έχει τα σωστά στοιχεία σύνδεσης.**
 
-2️⃣ Frontend
+2️⃣ # Frontend
 cd cinemamitropolit
 npm install
 npx expo start
 **Σκάναρε το QR Code με την εφαρμογή Expo Go στο κινητό.**
+
+3️⃣ # Database Setup
+
+Για να δημιουργήσετε τη βάση, τρέξτε:
+```sql
+CREATE DATABASE cinema;
+USE cinema;
+
+-- Users table
+CREATE TABLE users (
+  user_id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100) UNIQUE,
+  password VARCHAR(255)
+);
+
+-- Cinemas table
+CREATE TABLE cinemas (
+  cinema_id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  location VARCHAR(100),
+  description TEXT
+);
+
+-- Movies table
+CREATE TABLE movies (
+  movie_id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(100),
+  cinema_id INT,
+  duration INT,
+  rating VARCHAR(10),
+  FOREIGN KEY (cinema_id) REFERENCES cinemas(cinema_id)
+);
+
+-- Reservations table
+CREATE TABLE reservations (
+  reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  movie_id INT,
+  cinema_id INT,
+  date DATE,
+  time TIME,
+  seat_numbers VARCHAR(100),
+  FOREIGN KEY (user_id) REFERENCES users(user_id),
+  FOREIGN KEY (movie_id) REFERENCES movies(movie_id),
+  FOREIGN KEY (cinema_id) REFERENCES cinemas(cinema_id)
+);
+✉️ # Postman Collection
+
+Για γρήγορο έλεγχο των API endpoints, υπάρχει έτοιμο αρχείο Postman:
+
+`postman_collection.json`
+
+Μπορείτε να το εισάγετε στο Postman:  
+**File → Import → Upload Files → επιλέξτε το `postman_collection.json`.**
 
 🔧 Τεχνολογίες που χρησιμοποιήθηκαν
 
@@ -73,9 +129,10 @@ Axios για επικοινωνία μεταξύ frontend & backend
 
 Οι κρατήσεις εμφανίζονται σε πραγματικό χρόνο στο προφίλ μετά από refresh.
 
+
 🚀 Δημιουργός:Σπυρος Καλομοιροπουλος
 Υλοποιήθηκε για το μάθημα Mobile & Distributed Systems (CN6035).
-(./screenshots/cinemasscs.png),
+> ⚠️ **Σημείωση:** Αν τα παρακάτω screenshots δεν εμφανίζονται σωστά, μπορείτε να τα βρείτε όλα στον φάκελο:
 
 ## 📸 Screenshots
 
@@ -101,7 +158,9 @@ Axios για επικοινωνία μεταξύ frontend & backend
 ![Date](./Screenshots/pickday%20scs.jpg)
 
 ### ❌Delete Messages
-![Delete](./Screenshots/delete%20message%20scs.jpg)[ ](./Screenshots/delete%20ok%20scs.jpg)
+![Delete](./Screenshots/delete%20message%20scs.jpg)
+,(./Screenshots/delete%20ok%20scs.jpg)
 
 ### 👤 Profile
 ![Profile](./screenshots/reservationsmade%20scs.jpg)
+

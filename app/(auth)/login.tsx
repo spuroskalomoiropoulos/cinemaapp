@@ -18,7 +18,7 @@ export default function Login() {
       await AsyncStorage.setItem('token', data.token);
       await AsyncStorage.setItem('user', JSON.stringify(data.user));
       setUser(data.user);
-      router.replace('/(tabs)'); // μετά το login πάμε στα tabs
+      router.replace('/(tabs)'); // μετα το login κατευθειαν στα tabs
     } catch (e:any) {
       Alert.alert('Αποτυχία', e?.response?.data?.error || 'Κάτι πήγε στραβά');
     }

@@ -8,8 +8,8 @@ export default function TabsLayout() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: styles.tabBar,
-        tabBarActiveTintColor: '#FFA500', // Πορτοκαλί για το επιλεγμένο
-        tabBarInactiveTintColor: '#ccc',  // Απαλό γκρι για τα μη επιλεγμένα
+        tabBarActiveTintColor: '#FFA500', 
+        tabBarInactiveTintColor: '#ccc',  
         tabBarLabelStyle: { fontSize: 12, fontWeight: '600' },
       }}
     >
@@ -48,7 +48,7 @@ export default function TabsLayout() {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: '#1a0033', // Σκούρο μωβ για να ταιριάζει με το theme
+    backgroundColor: '#1a0033', //ενα απλο theme 
     borderTopWidth: 0,
     height: 110,
     paddingBottom: 12,
