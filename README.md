@@ -1,50 +1,107 @@
-# Welcome to your Expo app 👋
+# 🎬 Cinema Reservation App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📌 Περιγραφή
+Εφαρμογή mobile για κράτηση θέσεων σε κινηματογράφο.  
+Υλοποιήθηκε με:
+- **Frontend:** React Native (Expo)
+- **Backend:** Node.js + Express
+- **Database:** MariaDB
 
-## Get started
+Η εφαρμογή επιτρέπει στους χρήστες:
+- Να κάνουν **εγγραφή** και **σύνδεση**.
+- Να βλέπουν λίστα με διαθέσιμους κινηματογράφους.
+- Να κάνουν αναζήτηση με βάση το όνομα ή την τοποθεσία.
+- Να βλέπουν διαθέσιμες ταινίες σε κάθε σινεμά.
+- Να κάνουν κράτηση με επιλογή ημερομηνίας, ώρας και θέσεων.
+- Να προβάλλουν και να διαγράφουν μελλοντικές κρατήσεις τους.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## ⚙️ ΟδηγίΣες εγκατάστασης
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+## 1️⃣ Backend
 ```bash
-npm run reset-project
-```
+cd server
+npm install
+npm start   
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+**Σημείωση: Σιγουρέψου ότι η βάση MariaDB τρέχει και ότι το αρχείο .env έχει τα σωστά στοιχεία σύνδεσης.**
 
-## Learn more
+2️⃣ Frontend
+cd cinemamitropolit
+npm install
+npx expo start
+**Σκάναρε το QR Code με την εφαρμογή Expo Go στο κινητό.**
 
-To learn more about developing your project with Expo, look at the following resources:
+🔧 Τεχνολογίες που χρησιμοποιήθηκαν
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+React Native (Expo) για το mobile frontend
 
-## Join the community
+Node.js + Express για backend
 
-Join our community of developers creating universal apps.
+MariaDB για βάση δεδομένων
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+JWT (JSON Web Tokens) για authentication
+
+Axios για επικοινωνία μεταξύ frontend & backend
+
+📜 Λειτουργίες
+
+Εγγραφή / Σύνδεση με token authentication
+
+Λίστα και αναζήτηση κινηματογράφων
+
+Λίστα ταινιών ανά σινεμά
+
+Κράτηση θέσεων με επιλογή ώρας και ημερομηνίας
+
+Προβολή ιστορικού κρατήσεων
+
+Διαγραφή κρατήσεων
+
+👨‍💻 Οδηγίες για τον developer
+
+Τροποποίησε το lib/api.ts αν αλλάξει η τοπική IP για το backend.
+
+Σιγουρέψου ότι το backend τρέχει στο port 4000.
+
+Η βάση πρέπει να είναι ενεργή πριν τρέξεις το project.
+
+📝 Σημειώσεις
+
+Δοκιμασμένο σε Android μέσω Expo Go.
+
+Οι κρατήσεις εμφανίζονται σε πραγματικό χρόνο στο προφίλ μετά από refresh.
+
+🚀 Δημιουργός:Σπυρος Καλομοιροπουλος
+Υλοποιήθηκε για το μάθημα Mobile & Distributed Systems (CN6035).
+
+
+## 📸 Screenshots
+
+### 🔑 Login
+![Login](./screenshots/login%20scs.jpg)
+
+### 🆕 Register
+![Register](./screenshots/register%20scs.jpg)
+
+### 🎥 Cinemas List
+![Cinemas](./screenshots/cinemasscs.jpg)
+
+### 🍿 Movies 
+![Movies](./screenshots/movies%20menu%20scs.jpg)
+
+### 🍿 Movie Pick And Seat Pick
+![Movie-Seatnumber](./screenshots/pick%20seat%20and%20movies%20scs.jpg)
+
+### ⏱️ Time Pick 
+![Time](./Screenshots/pick%20hour%20scs.jpg)
+
+### 📅 Date Pick
+![Date](./Screenshots/pickday%20scs.jpg)
+
+### ❌Delete Messages
+![Delete](./Screenshots/delete%20message%20scs.jpg)[ ](./Screenshots/delete%20ok%20scs.jpg)
+
+### 👤 Profile
+![Profile](./screenshots/reservationsmade%20scs.jpg)

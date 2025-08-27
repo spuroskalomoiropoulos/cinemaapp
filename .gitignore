@@ -37,3 +37,9 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+# Server files
+server/node_modules/
+server/.env
+
+# Expo shared
+.expo-shared/
