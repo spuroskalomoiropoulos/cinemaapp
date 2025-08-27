@@ -75,7 +75,7 @@ Axios για επικοινωνία μεταξύ frontend & backend
 
 🚀 Δημιουργός:Σπυρος Καλομοιροπουλος
 Υλοποιήθηκε για το μάθημα Mobile & Distributed Systems (CN6035).
-
+(./screenshots/cinemasscs.png),
 
 ## 📸 Screenshots
 
@@ -86,7 +86,7 @@ Axios για επικοινωνία μεταξύ frontend & backend
 ![Register](./screenshots/register%20scs.jpg)
 
 ### 🎥 Cinemas List
-![Cinemas](./screenshots/cinemasscs.jpg)
+![Cinemas](./screenshots/cinemasscs.png)
 
 ### 🍿 Movies 
 ![Movies](./screenshots/movies%20menu%20scs.jpg)
